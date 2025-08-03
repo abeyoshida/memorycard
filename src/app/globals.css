@@ -1,26 +1,99 @@
 @import "tailwindcss";
 
+* {
+  font-family: var(--font-poppins), Poppins, sans-serif !important;
+}
+
+@theme {
+  /* Light mode variables */
+  --color-background: white;
+  --color-foreground: black;
+  --color-card: white;
+  --color-card-foreground: black;
+  --color-popover: white;
+  --color-popover-foreground: black;
+  --color-primary: black;
+  --color-primary-foreground: white;
+  --color-secondary: #f4f4f5;
+  --color-secondary-foreground: black;
+  --color-muted: #f4f4f5;
+  --color-muted-foreground: #71717a;
+  --color-accent: #f4f4f5;
+  --color-accent-foreground: black;
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: white;
+  --color-border: #e4e4e7;
+  --color-input: #e4e4e7;
+  --color-ring: black;
+
+  /* Dark mode variables */
+  --color-dark-background: #09090b;
+  --color-dark-foreground: #fafafa;
+  --color-dark-card: #09090b;
+  --color-dark-card-foreground: #fafafa;
+  --color-dark-popover: #09090b;
+  --color-dark-popover-foreground: #fafafa;
+  --color-dark-primary: #fafafa;
+  --color-dark-primary-foreground: #09090b;
+  --color-dark-secondary: #27272a;
+  --color-dark-secondary-foreground: #fafafa;
+  --color-dark-muted: #27272a;
+  --color-dark-muted-foreground: #a1a1aa;
+  --color-dark-accent: #27272a;
+  --color-dark-accent-foreground: #fafafa;
+  --color-dark-destructive: #ef4444;
+  --color-dark-destructive-foreground: #fafafa;
+  --color-dark-border: #27272a;
+  --color-dark-input: #27272a;
+  --color-dark-ring: #d4d4d8;
+
+  --radius: 0.5rem;
+}
+
+/* Default to dark mode */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-background: var(--color-dark-background);
+  --color-foreground: var(--color-dark-foreground);
+  --color-card: var(--color-dark-card);
+  --color-card-foreground: var(--color-dark-card-foreground);
+  --color-popover: var(--color-dark-popover);
+  --color-popover-foreground: var(--color-dark-popover-foreground);
+  --color-primary: var(--color-dark-primary);
+  --color-primary-foreground: var(--color-dark-primary-foreground);
+  --color-secondary: var(--color-dark-secondary);
+  --color-secondary-foreground: var(--color-dark-secondary-foreground);
+  --color-muted: var(--color-dark-muted);
+  --color-muted-foreground: var(--color-dark-muted-foreground);
+  --color-accent: var(--color-dark-accent);
+  --color-accent-foreground: var(--color-dark-accent-foreground);
+  --color-destructive: var(--color-dark-destructive);
+  --color-destructive-foreground: var(--color-dark-destructive-foreground);
+  --color-border: var(--color-dark-border);
+  --color-input: var(--color-dark-input);
+  --color-ring: var(--color-dark-ring);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Light mode override (when .light class is present) */
+.light {
+  --color-background: white;
+  --color-foreground: black;
+  --color-card: white;
+  --color-card-foreground: black;
+  --color-popover: white;
+  --color-popover-foreground: black;
+  --color-primary: black;
+  --color-primary-foreground: white;
+  --color-secondary: #f4f4f5;
+  --color-secondary-foreground: black;
+  --color-muted: #f4f4f5;
+  --color-muted-foreground: #71717a;
+  --color-accent: #f4f4f5;
+  --color-accent-foreground: black;
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: white;
+  --color-border: #e4e4e7;
+  --color-input: #e4e4e7;
+  --color-ring: black;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}

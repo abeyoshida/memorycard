@@ -1,0 +1,52 @@
+---
+alwaysApply: true
+description: Guidelines for using Shadcn UI components in this Next.js project
+---
+
+# Shadcn UI Component Guidelines
+
+This project uses **Shadcn UI for ALL UI elements**. Shadcn UI is already initialized and configured.
+
+## Configuration Files
+- [components.json](mdc:components.json) - Main Shadcn configuration
+- [src/lib/utils.ts](mdc:src/lib/utils.ts) - Contains the `cn()` utility function for conditional styling
+- [src/components/ui/](mdc:src/components/ui/) - Directory containing all Shadcn UI components
+- [tailwind.config.ts](mdc:tailwind.config.ts) - Tailwind configuration with Shadcn theme extensions
+
+## Installation Commands
+
+### If Shadcn is NOT initialized (check for components.json):
+```bash
+npx shadcn@latest init
+```
+
+### To install specific components:
+```bash
+npx shadcn@latest add [component-name]
+```
+
+**Examples:**
+```bash
+npx shadcn@latest add button
+npx shadcn@latest add card
+npx shadcn@latest add input
+npx shadcn@latest add form
+npx shadcn@latest add dialog
+```
+
+## Usage Guidelines
+
+1. **Always use Shadcn components** instead of creating custom UI components
+2. **Import from the ui directory**: `import { Button } from "@/components/ui/button"`
+3. **Use the cn() utility** for conditional styling: `cn("base-classes", condition && "conditional-classes")`
+4. **Check existing components** in [src/components/ui/](mdc:src/components/ui/) before installing new ones
+5. **Follow the established theme** defined in [src/app/globals.css](mdc:src/app/globals.css)
+
+## Already Installed Components
+- Button ([src/components/ui/button.tsx](mdc:src/components/ui/button.tsx))
+
+## Project Structure
+- Components are server components by default (Next.js App Router)
+- Use TypeScript for all component definitions
+- Follow the absolute import pattern with `@/` prefix
+- Database schema is defined in [src/lib/db/schema.ts](mdc:src/lib/db/schema.ts)
