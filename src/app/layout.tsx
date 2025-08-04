@@ -38,12 +38,12 @@ export default function RootLayout({
               <div className="flex items-center gap-4">
                 <SignedOut>
                   <SignInButton>
-                    <button className="bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2 rounded-md text-sm font-medium transition-colors">
+                    <button className="bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer">
                       Sign In
                     </button>
                   </SignInButton>
                   <SignUpButton>
-                    <button className="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-md text-sm font-medium transition-colors">
+                    <button className="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer">
                       Sign Up
                     </button>
                   </SignUpButton>
